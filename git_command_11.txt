@@ -1,0 +1,951 @@
+
+
+..................................commands................................................
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/may10 (master)
+$ cd ..
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~ (master)
+$ mkdir 11may/
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~ (master)
+$ cd 11may/
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git init
+Initialized empty Git repository in C:/Users/Lenovo/11may/.git/
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ touch file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ vi file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git config --global user.name "shravani"
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git config --global user.email "shravani.mula@thundersoft.com"
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git commit -m "first commit"
+[master (root-commit) 4699aed] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git remote add origin "https://github.com/shravanimula/11may2022.git"
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shravanimula/11may2022.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 4699aed80080e9723408252cf679a1e5deceaaf5 (HEAD -> master, origin/master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ ls
+file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git branch
+* master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git branch b1
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git branch
+  b1
+* master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ git branch
+* b1
+  master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git branch
+  b1
+* master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git  checkout -b b2
+Switched to a new branch 'b2'
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b2)
+$ git branch
+  b1
+* b2
+  master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git branch
+  b1
+  b2
+* master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git branch -d b2
+Deleted branch b2 (was 4699aed).
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git branch
+  b1
+* master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ ls
+file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ git log
+commit 4699aed80080e9723408252cf679a1e5deceaaf5 (HEAD -> b1, origin/master, master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ ls
+file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ vi file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ git commit -m "add some files to file"
+[b1 78ee726] add some files to file
+ 1 file changed, 3 insertions(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ git log
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (HEAD -> b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5 (origin/master, master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (b1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 4699aed80080e9723408252cf679a1e5deceaaf5 (HEAD -> master, origin/master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git merge b1
+Updating 4699aed..78ee726
+Fast-forward
+ file.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (HEAD -> master, b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5 (origin/master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (HEAD -> master, b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5 (origin/master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 280 bytes | 280.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shravanimula/11may2022.git
+   4699aed..78ee726  master -> master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (HEAD -> master, origin/master, b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git fetch origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 653 bytes | 2.00 KiB/s, done.
+From https://github.com/shravanimula/11may2022
+ * branch            master     -> FETCH_HEAD
+   78ee726..4eebaee  master     -> origin/master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git merge origin/master
+Updating 78ee726..4eebaee
+Fast-forward
+ file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+c#
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940 (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940 (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+c#
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940 (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+c#
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 662 bytes | 7.00 KiB/s, done.
+From https://github.com/shravanimula/11may2022
+ * branch            master     -> FETCH_HEAD
+   4eebaee..bce2226  master     -> origin/master
+Updating 4eebaee..bce2226
+Fast-forward
+ file.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+c#
+ds
+c
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+:
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+:
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+:
+
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+vi file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git add file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git commit -m "new commit"
+[master e959a8b] new commit
+ 1 file changed, 1 insertion(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit e959a8b8f6d0425375678d6d781d934139895100 (HEAD -> master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:25:55 2022 +0530
+
+    new commit
+
+commit bce22268bca943759349b266b90b1130a4dbfbac (origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+:
+commit e959a8b8f6d0425375678d6d781d934139895100 (HEAD -> master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:25:55 2022 +0530
+
+    new commit
+
+commit bce22268bca943759349b266b90b1130a4dbfbac (origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+:
+commit e959a8b8f6d0425375678d6d781d934139895100 (HEAD -> master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:25:55 2022 +0530
+
+    new commit
+
+commit bce22268bca943759349b266b90b1130a4dbfbac (origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+:
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+
+
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git reset --mixed HEAD~1
+Unstaged changes after reset:
+M       file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+c#
+ds
+c
+c++
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+(END)
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+(END)
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ ls
+file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ vi file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git add file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git commit -m "soft reset"
+[master b780c61] soft reset
+ 1 file changed, 2 insertions(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit b780c610f9436e934d4ac4a29116793ccba98a36 (HEAD -> master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:34:53 2022 +0530
+
+    soft reset
+
+commit bce22268bca943759349b266b90b1130a4dbfbac (origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git reset --soft HEAD~1
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ vi file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git add file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git commit -m "hard reset"
+[master 0e694a2] hard reset
+ 1 file changed, 3 insertions(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit 0e694a2161adac535205136239eeb7ffdb099956 (HEAD -> master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:38:28 2022 +0530
+
+    hard reset
+
+commit bce22268bca943759349b266b90b1130a4dbfbac (origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git reset --hard HEAD~1
+HEAD is now at bce2226 Update file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+c#
+ds
+c
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit bce22268bca943759349b266b90b1130a4dbfbac (HEAD -> master, origin/master)
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:33:10 2022 +0530
+
+    first commit
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ vi file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git add file.txt
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git commit -m "revert commit"
+[master bcf2608] revert commit
+ 1 file changed, 1 insertion(+)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shravanimula/11may2022.git
+   bce2226..bcf2608  master -> master
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit bcf2608aee240fccb36ef1e296911310cdef1ea6 (HEAD -> master, origin/master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:44:15 2022 +0530
+
+    revert commit
+
+commit bce22268bca943759349b266b90b1130a4dbfbac
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git revert^C
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git revert  bcf2608aee240fccb36ef1e296911310cdef1ea6
+[master cd82141] Revert "revert file.txt"
+ 1 file changed, 1 deletion(-)
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ git log
+commit cd82141bf54dde9e95cb0f0b06466e1f6d5ebec7 (HEAD -> master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:46:03 2022 +0530
+
+    Revert "revert file.txt"
+
+    This reverts commit bcf2608aee240fccb36ef1e296911310cdef1ea6.
+
+commit bcf2608aee240fccb36ef1e296911310cdef1ea6 (origin/master)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 11:44:15 2022 +0530
+
+    revert commit
+
+commit bce22268bca943759349b266b90b1130a4dbfbac
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:13:31 2022 +0530
+
+    Update file.txt
+
+commit 4eebaeecdb487184dad603f75621b86fd5d2e940
+Author: shravanimula <98573934+shravanimula@users.noreply.github.com>
+Date:   Wed May 11 11:01:38 2022 +0530
+
+    changes
+
+commit 78ee726d45f1618bc95e191f95843b1abdfc90f0 (b1)
+Author: shravani <shravani.mula@thundersoft.com>
+Date:   Wed May 11 10:43:11 2022 +0530
+
+    add some files to file
+
+commit 4699aed80080e9723408252cf679a1e5deceaaf5
+Author: shravani <shravani.mula@thundersoft.com>
+
+Lenovo@DESKTOP-FTFOA43 MINGW64 ~/11may (master)
+$ cat file.txt
+#INCLUDE<STDIO.H>
+int main()
+{
+}
+c#
+ds
